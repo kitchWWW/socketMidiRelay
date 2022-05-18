@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>computer side socket midi relay</title>
+	</head>
+	<body>
+		<h1>computer!!!</h1>
+		<div id="things"></div>
+		<br>
+		<br>
+		copy and past the ID of the midi output thing you want to send data to, then press enter
+		<br>
+		<input type="text" id="whichToSend" onchange="updateWhichToSend()">
+		<div id="myStatus">hi</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./computer.js" charset="utf-8"></script>
+</html>
