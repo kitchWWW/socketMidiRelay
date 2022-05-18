@@ -7,7 +7,7 @@ from flask import send_file
 
 app = Flask(__name__, static_url_path='/socketMidiRelay',static_folder='socketMidiRelay')
 app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins='*')
 
 
 @socketio.on('my event')
