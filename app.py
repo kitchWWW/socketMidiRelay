@@ -17,7 +17,7 @@ def handle_my_custom_event(json):
     emit('my response', json, broadcast=True)
 
 
-@app.route('/midi')
+@app.route('/midi/')
 def index():
     print("sending index")
     return send_file('static/index.html')
