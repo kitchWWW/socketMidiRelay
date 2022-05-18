@@ -17,17 +17,15 @@ def handle_my_custom_event(json):
     emit('my response', json, broadcast=True)
 
 
-@app.route('/')
+@app.route('/midi')
 def index():
     print("sending index")
     return send_file('static/index.html')
 
-@app.route('/go.js')
+@app.route('/midi/go.js')
 def js():
     print("sending index")
     return send_file('static/go.js')
-
-
 
 
 
