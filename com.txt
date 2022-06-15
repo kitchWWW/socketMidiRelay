@@ -10,7 +10,7 @@ server {
 }
 
 
-
+lsof -i :8082
 
 
 
@@ -20,4 +20,7 @@ sudo vi /etc/nginx/nginx.conf
 
 
 SPECIAL COMMAND TO MAKE IT WORK!!!!
-/home/ec2-user/theseSpecialHands/bin/python3 /home/ec2-user/theseSpecialHands/bin/flask run --host=0.0.0.0 --port=8080
+
+/home/ec2-user/socketMidiRelay/bin/python3 /home/ec2-user/socketMidiRelay/bin/flask run --host=0.0.0.0 --port=8082
+
+nohup /home/ec2-user/socketMidiRelay/bin/python3 /home/ec2-user/socketMidiRelay/bin/flask run --host=0.0.0.0 --port=8082 &
