@@ -72,3 +72,12 @@ function onMIDIMessage( event ) {
 function startLoggingMIDIInput( midiAccess) {
   midiAccess.inputs.forEach( function(entry) {entry.onmidimessage = onMIDIMessage;});
 }
+
+
+
+
+var noSleep = new NoSleep();
+document.addEventListener('click', function enableNoSleep() {
+  document.removeEventListener('click', enableNoSleep, false);
+  noSleep.enable();
+}, false);

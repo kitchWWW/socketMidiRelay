@@ -101,3 +101,12 @@ function listInputsAndOutputs( midiAccess ) {
     count+=1
   }
 }
+
+
+// Enable wake lock.
+// (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+var noSleep = new NoSleep();
+document.addEventListener('click', function enableNoSleep() {
+  document.removeEventListener('click', enableNoSleep, false);
+  noSleep.enable();
+}, false);
